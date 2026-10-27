@@ -1,0 +1,16 @@
+J:\xiaolu-r2\pc-tools\JlFlashGui\bin\Debug\net8.0-windows\JlFlashGui.exe
+J:\xiaolu-r2\pc-tools\JlFlashGui\bin\Debug\net8.0-windows\JlFlashGui.deps.json
+J:\xiaolu-r2\pc-tools\JlFlashGui\bin\Debug\net8.0-windows\JlFlashGui.runtimeconfig.json
+J:\xiaolu-r2\pc-tools\JlFlashGui\bin\Debug\net8.0-windows\JlFlashGui.dll
+J:\xiaolu-r2\pc-tools\JlFlashGui\bin\Debug\net8.0-windows\JlFlashGui.pdb
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.GeneratedMSBuildEditorConfig.editorconfig
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.AssemblyInfoInputs.cache
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.AssemblyInfo.cs
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.csproj.CoreCompileInputs.cache
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.dll
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\refint\JlFlashGui.dll
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.pdb
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.genruntimeconfig.cache
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\ref\JlFlashGui.dll
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.MainForm.resources
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.csproj.GenerateResource.cache

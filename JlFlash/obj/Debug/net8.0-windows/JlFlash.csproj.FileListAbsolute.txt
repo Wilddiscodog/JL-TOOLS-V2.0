@@ -1,0 +1,14 @@
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\JlFlash.GeneratedMSBuildEditorConfig.editorconfig
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\JlFlash.AssemblyInfoInputs.cache
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\JlFlash.AssemblyInfo.cs
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\JlFlash.csproj.CoreCompileInputs.cache
+J:\xiaolu-r2\pc-tools\JlFlash\bin\Debug\net8.0-windows\JlFlash.exe
+J:\xiaolu-r2\pc-tools\JlFlash\bin\Debug\net8.0-windows\JlFlash.deps.json
+J:\xiaolu-r2\pc-tools\JlFlash\bin\Debug\net8.0-windows\JlFlash.runtimeconfig.json
+J:\xiaolu-r2\pc-tools\JlFlash\bin\Debug\net8.0-windows\JlFlash.dll
+J:\xiaolu-r2\pc-tools\JlFlash\bin\Debug\net8.0-windows\JlFlash.pdb
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\JlFlash.dll
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\refint\JlFlash.dll
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\JlFlash.pdb
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\JlFlash.genruntimeconfig.cache
+J:\xiaolu-r2\pc-tools\JlFlash\obj\Debug\net8.0-windows\ref\JlFlash.dll
