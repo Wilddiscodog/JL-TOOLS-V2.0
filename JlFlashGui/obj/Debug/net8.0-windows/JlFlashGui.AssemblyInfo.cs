@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JlFlashGui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47f09d275eb3a51cedd6fe8b73868cbb7d264635")]
 [assembly: System.Reflection.AssemblyProductAttribute("JlFlashGui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JlFlashGui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,3 +14,4 @@ J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.genruntimec
 J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\ref\JlFlashGui.dll
 J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.MainForm.resources
 J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.csproj.GenerateResource.cache
+J:\xiaolu-r2\pc-tools\JlFlashGui\obj\Debug\net8.0-windows\JlFlashGui.sourcelink.json

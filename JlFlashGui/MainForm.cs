@@ -478,9 +478,9 @@ namespace JlFlashGui
             var g3 = NewGroup("说明", 118);
             g3.Controls.Add(new Label
             {
-                Text = "① 打包格式（fw-mini-sdk）：download.bat 已强制 set KEY_FILE=-key 0x7DF1.key；\n" +
-                       "   jl_isd.* / update-ota.ufw 均为 chipkey(0x7DF1) 流，不再是默认种子 0xFFFF。\n" +
-                       "② 默认只擦写固件区（与 download.bat 一致），保留 VM/BTIF（WiFi 配网、BT/WiFi MAC）。\n" +
+                Text = "① 打包/烧录与 download.bat 对齐：-key 0x7DF1.key + -res audlogo_mini cfg；\n" +
+                       "   正常 FLASH_BIN_SIZE≈0x259000；缺 audlogo 会缩成≈0x207000 并可能 EQ 启动崩。\n" +
+                       "② 默认只擦写固件区，保留 VM/BTIF（WiFi 配网、BT/WiFi MAC）。\n" +
                        "③ 勾选「全片擦除」才加 -format all（擦到 0xfff000，含 BTIF）；OTA 拖入 update-ota.ufw。\n" +
                        "④ AC7911 ROM 强制 eFuse 解密：裸写 0xFFFF 默认流无法启动。前置：UDISK「进入下载模式」或 CS 短接救砖。",
                 Dock = DockStyle.Fill,
@@ -502,11 +502,17 @@ namespace JlFlashGui
             var ini = Path.Combine(tools, "isd_config.ini");
             var uboot = Path.Combine(tools, "uboot.boot");
             var app = Path.Combine(tools, "app.bin");
+            var cfgTool = Path.Combine(tools, "cfg_tool.bin");
+            var audlogo = Path.Combine(tools, "audlogo_mini");
+            var cfgDir = Path.Combine(tools, "cfg");
 
             if (!File.Exists(exe)) { Log("找不到 " + exe); return; }
             if (!File.Exists(ini)) { Log("找不到 " + ini); return; }
             if (!File.Exists(uboot)) { Log("找不到 " + uboot); return; }
             if (!File.Exists(app)) { Log("找不到 " + app + "（先在 SDK 编译出 app.bin 并放入工具目录）"); return; }
+            if (!File.Exists(cfgTool)) { Log("找不到 " + cfgTool); return; }
+            if (!Directory.Exists(audlogo)) { Log("找不到 " + audlogo + "（缺提示音资源会打出 FLASH_BIN≈0x207000 的坏包）"); return; }
+            if (!Directory.Exists(cfgDir)) { Log("找不到 " + cfgDir); return; }
             if (!File.Exists(key)) { Log("找不到 key 文件: " + key); return; }
 
             // 默认不加 -format all：与 SDK download.bat 一致，只擦固件写入所需扇区，
@@ -514,17 +520,21 @@ namespace JlFlashGui
             bool formatAll = _ckFormatAll != null && _ckFormatAll.Checked;
             string formatArg = formatAll ? " -format all" : "";
 
-            Log($"加密烧录 (fw-mini-sdk 同款 -key): tools={tools}");
+            Log($"加密烧录 (对齐 download.bat -key/-res): tools={tools}");
             Log(formatAll
                 ? $"key={key} —— 全片擦除模式（含 VM/BTIF/MAC），请勿断电！"
                 : $"key={key} —— 仅擦固件区，保留配置区(VM/BTIF)，请勿断电！");
+            Log("期望 FLASH_BIN_SIZE≈0x259000（含 audlogo_mini）；若≈0x207000 说明 -res 未生效，勿当成功。");
 
+            // 与 cpu/wl82/tools/download.bat 同源：必须 -res audlogo_mini cfg
             var psi = new ProcessStartInfo
             {
                 FileName = exe,
                 WorkingDirectory = tools,
                 Arguments = $"isd_config.ini -tonorflash -dev wl82 -boot 0x1c02000 -div1 -wait 3000 " +
-                            $"-uboot uboot.boot -app app.bin cfg_tool.bin{formatArg} -key {Path.GetFileName(key)} -reboot 500",
+                            $"-uboot uboot.boot -app app.bin cfg_tool.bin " +
+                            $"-res audlogo_mini cfg{formatArg} " +
+                            $"-key {Path.GetFileName(key)} -reboot 500 -update_files normal -expend-bin",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
